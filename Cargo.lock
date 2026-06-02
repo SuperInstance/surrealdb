@@ -7130,6 +7130,7 @@ dependencies = [
  "storekey",
  "strsim",
  "subtle",
+ "surrealdb-intelligence",
  "surrealdb-protocol",
  "surrealdb-rocksdb",
  "surrealdb-tikv-client",
@@ -7159,6 +7160,16 @@ dependencies = [
  "wasmtimer",
  "web-time",
  "wiremock",
+]
+
+[[package]]
+name = "surrealdb-intelligence"
+version = "0.1.0"
+dependencies = [
+ "serde",
+ "serde_json",
+ "thiserror 2.0.18",
+ "tracing",
 ]
 
 [[package]]
