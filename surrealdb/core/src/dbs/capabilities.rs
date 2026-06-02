@@ -123,6 +123,7 @@ impl std::str::FromStr for FuncTarget {
 pub enum ExperimentalTarget {
 	Files,
 	Surrealism,
+	Intelligence,
 }
 
 impl fmt::Display for ExperimentalTarget {
@@ -130,6 +131,7 @@ impl fmt::Display for ExperimentalTarget {
 		match self {
 			Self::Files => write!(f, "files"),
 			Self::Surrealism => write!(f, "surrealism"),
+			Self::Intelligence => write!(f, "intelligence"),
 		}
 	}
 }
@@ -172,6 +174,7 @@ impl std::str::FromStr for ExperimentalTarget {
 		match s.trim().to_ascii_lowercase().as_str() {
 			"files" => Ok(ExperimentalTarget::Files),
 			"surrealism" => Ok(ExperimentalTarget::Surrealism),
+			"intelligence" => Ok(ExperimentalTarget::Intelligence),
 			_ => Err(ParseExperimentalTargetError::InvalidName),
 		}
 	}

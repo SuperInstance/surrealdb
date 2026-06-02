@@ -1,0 +1,25 @@
+[package]
+name = "surrealdb-intelligence"
+edition.workspace = true
+license-file.workspace = true
+version = "0.1.0"
+description = "Spectral graph analysis and query intelligence for SurrealDB — discover hidden structure in your graph database"
+authors = ["SurrealDB Contributors"]
+repository.workspace = true
+homepage.workspace = true
+publish = false
+
+[package.metadata.docs.rs]
+features = ["default"]
+
+[features]
+default = []
+
+[dependencies]
+# Serde
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# Utilities
+thiserror = "2"
+tracing = "0.1"

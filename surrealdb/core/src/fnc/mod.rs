@@ -21,6 +21,7 @@ pub mod encoding;
 pub mod file;
 pub mod geo;
 pub mod http;
+pub mod intelligence;
 pub mod math;
 pub mod not;
 pub mod object;
@@ -629,6 +630,11 @@ pub async fn asynchronous(
 		"search::score" => search::score((ctx, doc)).await,
 		"search::highlight" => search::highlight((ctx, doc)).await,
 		"search::offsets" => search::offsets((ctx, doc)).await,
+		// Intelligence functions
+		exp(Intelligence) "analyze::intelligence::report" => intelligence::report((stk, ctx, Some(opt))).await,
+		exp(Intelligence) "analyze::intelligence::fiedler" => intelligence::fiedler((stk, ctx, Some(opt))).await,
+		exp(Intelligence) "analyze::intelligence::communities" => intelligence::communities((stk, ctx, Some(opt))).await,
+		exp(Intelligence) "analyze::intelligence::cheeger" => intelligence::cheeger((stk, ctx, Some(opt))).await,
 		//
 		"set::all" => set::all((stk, ctx, Some(opt), doc)).await,
 		"set::any" => set::any((stk, ctx, Some(opt), doc)).await,

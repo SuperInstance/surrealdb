@@ -21,6 +21,8 @@ members = [
     "surrealism/macros",
     "surrealism/runtime",
     "surrealism/types",
+    # Intelligence crate
+    "surreal-intelligence",
     # Other
     "profiling",
 ]
@@ -62,6 +64,8 @@ surrealism = { version = "0.2", path = "surrealism" }
 surrealism-macros = { version = "0.2", path = "surrealism/macros", default-features = false }
 surrealism-runtime = { version = "0.2", path = "surrealism/runtime" }
 surrealism-types = { version = "0.2", path = "surrealism/types", default-features = false }
+# Intelligence crate
+surrealdb-intelligence = { version = "0.1", path = "surreal-intelligence" }
 # External surreal crates
 affinitypool = "0.4.0"
 dmp = "0.2.3"
